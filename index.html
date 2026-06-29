@@ -1,40 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mindful Stock Feed</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mindful Stock Feed</title>
+<style>
+body{margin:0;background:#0f172a;color:#fff;font-family:Arial,sans-serif}
+header{position:sticky;top:0;background:#111827;padding:14px;border-bottom:1px solid #333}
+h2{margin:0}
+.feed{padding:12px;display:flex;flex-direction:column;gap:16px}
+.card{background:#1f2937;border-radius:18px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.card img{width:100%;display:block}
+.content{padding:14px}
+.tag{display:inline-block;padding:4px 8px;border-radius:12px;font-size:12px;margin-bottom:8px}
+.ringan{background:#16a34a}.sedang{background:#d97706}.video{background:#7c3aed}.berat{background:#dc2626}.quiz{background:#0284c7}
+button{padding:10px 16px;border:none;border-radius:10px;margin-right:8px}
+.yes{background:#22c55e;color:#fff}.no{background:#ef4444;color:#fff}
+video{width:100%;display:block}
+small{color:#aaa}
+</style>
 </head>
 <body>
-  <main class="app-shell">
-    <header class="topbar">
-      <div>
-        <p class="eyebrow">Mindful Scrolling</p>
-        <h1>Stock Feed</h1>
-      </div>
-      <button id="resetBtn" class="small-btn">Reset</button>
-    </header>
+<header><h2>📈 Mindful Stock Feed</h2><small>Prototype Experience</small></header>
+<div class="feed">
 
-    <section class="intro-card">
-      <p>Scroll pelan. Ambil insight, bukan impuls.</p>
-      <div class="mix">
-        <span>70% ringan</span>
-        <span>20% sedang</span>
-        <span>10% berat</span>
-      </div>
-    </section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=900" alt="">
+<div class="content"><span class="tag ringan">RINGAN</span>
+<h3>ADRO naik +2.4%</h3>
+<p>Foreign net buy meningkat. Apakah ini awal akumulasi?</p></div>
+</div>
 
-    <section id="feed" class="feed"></section>
-  </main>
+<div class="card">
+<video controls poster="https://images.unsplash.com/photo-1559526324-593bc073d938?w=900">
+<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+</video>
+<div class="content"><span class="tag video">VIDEO SHORT</span>
+<h3>3 Tanda Smart Money Masuk</h3>
+<p>Video dummy 30 detik untuk menguji pengalaman feed.</p></div>
+</div>
 
-  <nav class="bottom-nav">
-    <button class="active">Feed</button>
-    <button>Watchlist</button>
-    <button>Belajar</button>
-    <button>Refleksi</button>
-  </nav>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=900">
+<div class="content"><span class="tag sedang">CHART</span>
+<h3>BBRI Breakout</h3>
+<p>Volume meningkat disertai penembusan resistance.</p></div>
+</div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=900">
+<div class="content"><span class="tag berat">WYCKOFF</span>
+<h3>Fase Akumulasi</h3>
+<p>Harga bergerak sideways. Perhatikan area spring.</p></div>
+</div>
+
+<div class="card">
+<div class="content"><span class="tag quiz">QUIZ</span>
+<h3>Menurutmu ADRO besok?</h3>
+<button class="yes">Naik</button>
+<button class="no">Turun</button>
+</div>
+</div>
+
+<div class="card"><div class="content"><span class="tag ringan">RINGAN</span><h3>Tahukah Kamu?</h3><p>Warren Buffett menghabiskan lebih banyak waktu membaca daripada trading.</p></div></div>
+<div class="card"><div class="content"><span class="tag sedang">SEDANG</span><h3>Foreign Flow</h3><p>Asing mencatat net buy Rp120 miliar hari ini.</p></div></div>
+<div class="card"><div class="content"><span class="tag ringan">RINGAN</span><h3>Market Fact</h3><p>IHSG menguat didorong sektor energi.</p></div></div>
+<div class="card"><div class="content"><span class="tag video">VIDEO</span><h3>Video: Support & Resistance</h3><p>Belajar 45 detik.</p></div></div>
+<div class="card"><div class="content"><span class="tag ringan">RINGAN</span><h3>Meme Investor</h3><p>Beli karena FOMO? 😅</p></div></div>
+<div class="card"><div class="content"><span class="tag sedang">SEDANG</span><h3>TLKM</h3><p>Pullback sehat menuju MA20.</p></div></div>
+<div class="card"><div class="content"><span class="tag berat">BERAT</span><h3>Bandarmology</h3><p>Distribusi mulai terlihat.</p></div></div>
+<div class="card"><div class="content"><span class="tag ringan">RINGAN</span><h3>Quote</h3><p>'Price is what you pay...'</p></div></div>
+<div class="card"><div class="content"><span class="tag video">VIDEO</span><h3>News Short</h3><p>BI mempertahankan suku bunga.</p></div></div>
+<div class="card"><div class="content"><span class="tag sedang">SEDANG</span><h3>CPIN</h3><p>Volume mulai meningkat.</p></div></div>
+<div class="card"><div class="content"><span class="tag ringan">RINGAN</span><h3>Polling</h3><p>Sektor favorit minggu ini?</p></div></div>
+<div class="card"><div class="content"><span class="tag berat">BERAT</span><h3>Laporan Keuangan</h3><p>Margin laba meningkat.</p></div></div>
+<div class="card"><div class="content"><span class="tag ringan">RINGAN</span><h3>Checklist</h3><p>Sudah cek risiko hari ini?</p></div></div>
+<div class="card"><div class="content"><span class="tag video">VIDEO</span><h3>Belajar Candlestick</h3><p>Hammer vs Doji.</p></div></div>
+<div class="card"><div class="content"><span class="tag sedang">SEDANG</span><h3>BBCA</h3><p>Trend masih bullish.</p></div></div>
+</div></body></html>
